@@ -2,6 +2,7 @@
 TODO:
 - Only update time in updateTime()
 - Separate function(s) for updating day/date/month when time hits midnight
+- Merge variables in updateTime instead of loose
  */
 
 //Main variables
@@ -24,7 +25,7 @@ var dayOfMonth = 0
 //Update variables
 function updateTime(){
     currentTime = new Date()
-/*     year = currentTime.getFullYear()
+    year = currentTime.getFullYear()
     month = currentTime.getMonth() + 1
     day = currentTime.getDate()
     hour = currentTime.getHours()
@@ -40,7 +41,7 @@ function updateTime(){
         second = "0" + second
     }
     dayOfWeek = currentTime.getDay()
-    console.log(hour + ":" + minute + ":" + second) */
+    console.log(hour + ":" + minute + ":" + second)
 }
 
 //Function to display day of month
@@ -48,9 +49,9 @@ function updateTime(){
 function displayDayOfMonth(){
     if(day === 1 || day === 21 || day == 31){
         dayOfMonth = day + "st"
-    } else if(day === 2){
+    } else if(day === 2 || day === 22) {
         dayOfMonth = day + "nd"
-    } else if(day === 3){
+    } else if(day === 3 || day === 23){
         dayOfMonth = day + "rd"
     } else{
         dayOfMonth = day + "th"

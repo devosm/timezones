@@ -11,26 +11,16 @@ let second = currentTime.getSeconds()
 let dayOfWeek = currentTime.getDay()
 let dayOfMonth = 0
 
-function setdayofmonth(){if (day === 1){
-    dayOfMonth = day + "st"
-} else if (day === 2){
-    dayOfMonth = day + "nd"
-} else if (day === 3){
-    dayOfMonth = day + "rd"
-} else if (day < 3 && day > 21){
-    var dayOfMonth = day + "th"
-} else if (day === 21){
-    dayOfMonth = day + "st"
-} else if (day === 22){
-    dayOfMonth = day + "nd"
-} else if (day < 22 && day > 31){
-    dayOfMonth = day + "th"
-} else  if (day === 31){
-    dayOfMonth = day + "st"
-}
-}
-
 function displayTime(){
+    if(day === 1 || day === 21 || day == 31){
+        dayOfMonth = day + "st"
+    } else if(day === 2){
+        dayOfMonth = day + "nd"
+    } else if(day === 3){
+        dayOfMonth = day + "rd"
+    } else{
+        dayOfMonth = day + "th"
+    }
     let currentTime = new Date()
     console.log("Today is " + daysArray[dayOfWeek] + " the " + dayOfMonth)
 }

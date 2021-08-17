@@ -1,6 +1,4 @@
 let currentTime = new Date()
-let weekOfDayEl = document.getElementById("weekOfDay-el")
-let refresh = 1000
 let daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 //Time variables
@@ -13,23 +11,14 @@ let second = currentTime.getSeconds()
 let dayOfWeek = currentTime.getDay()
 let dayOfMonth = 0
 
-//For testing purposes
-console.log(day + "/" + month + "/" + year)
-
-//Day of week
-
-console.log(daysArray[dayOfWeek])
-
-//Day of Month
-
-if (day === 1){
+function setdayofmonth(){if (day === 1){
     dayOfMonth = day + "st"
 } else if (day === 2){
     dayOfMonth = day + "nd"
 } else if (day === 3){
     dayOfMonth = day + "rd"
 } else if (day < 3 && day > 21){
-    dayOfMonth = day + "th"
+    var dayOfMonth = day + "th"
 } else if (day === 21){
     dayOfMonth = day + "st"
 } else if (day === 22){
@@ -39,16 +28,11 @@ if (day === 1){
 } else  if (day === 31){
     dayOfMonth = day + "st"
 }
-
-
-//Time
-console.log(hour + ":" + minute + ":" + second)
+}
 
 function displayTime(){
     let currentTime = new Date()
-    weekOfDayEl.textContent = "Today is " + daysArray[dayOfWeek]
-    console.log(currentTime)
+    console.log("Today is " + daysArray[dayOfWeek] + " the " + dayOfMonth)
 }
 
 displayTime()
-setInterval(displayTime, refresh)

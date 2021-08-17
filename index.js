@@ -1,3 +1,9 @@
+/* 
+TODO:
+- Only update time in updateTime()
+- Separate function(s) for updating day/date/month when time hits midnight
+ */
+
 //Main variables
 var currentTime = new Date()
 let weekOfDayEl = document.getElementById("weekOfDay-el")
@@ -40,7 +46,7 @@ function updateTime(){
 
 //Function to display day of month
 
-function displayWeekday(){
+function displayDayOfMonth(){
     if(day === 1 || day === 21 || day == 31){
         dayOfMonth = day + "st"
     } else if(day === 2){
@@ -53,13 +59,12 @@ function displayWeekday(){
     console.log(dayOfMonth + " of " + monthsArray[month - 1])
 }
 
-displayWeekday()
+displayDayOfMonth()
 
 //Output of time
 
 function displayTime(){
-    displayWeekday()
-    console.log(currentTime)
+    displayDayOfMonth()
     console.log("Date: " + day + "/" + month + "/" + year)
     console.log("Time: " + hour + ":" + minute + ":" + second)
     console.log("Day of week: " + daysArray[dayOfWeek])

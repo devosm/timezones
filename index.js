@@ -7,7 +7,6 @@ TODO:
 //Main variables
 var currentTime = new Date()
 let weekOfDayEl = document.getElementById("weekOfDay-el")
-let refresh = 1000
 let daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 let monthsArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
@@ -25,7 +24,7 @@ var dayOfMonth = 0
 //Update variables
 function updateTime(){
     currentTime = new Date()
-    year = currentTime.getFullYear()
+/*     year = currentTime.getFullYear()
     month = currentTime.getMonth() + 1
     day = currentTime.getDate()
     hour = currentTime.getHours()
@@ -41,7 +40,7 @@ function updateTime(){
         second = "0" + second
     }
     dayOfWeek = currentTime.getDay()
-    console.log(hour + ":" + minute + ":" + second)
+    console.log(hour + ":" + minute + ":" + second) */
 }
 
 //Function to display day of month
@@ -70,5 +69,5 @@ function displayTime(){
     console.log("Day of week: " + daysArray[dayOfWeek])
 }
 
-setInterval(updateTime, refresh)
-setInterval(displayTime, refresh)
+setInterval(updateTime, 1000)
+setInterval(displayTime, 1000)

@@ -25,7 +25,7 @@ function updateTime(){
     minute = currentTime.getMinutes()
     second = currentTime.getSeconds()
     dayOfWeek = currentTime.getDay()
-    dayOfMonth = 0
+    dayOfMonth = 0 //Can be deleted?
 }
 
 //For testing purposes
@@ -60,5 +60,3 @@ function displayTime(){
 
 setInterval(updateTime, refresh)
 setInterval(displayTime, refresh)
-
-//Time

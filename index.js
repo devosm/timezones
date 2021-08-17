@@ -1,3 +1,4 @@
+//Main variables
 var currentTime = new Date()
 let weekOfDayEl = document.getElementById("weekOfDay-el")
 let refresh = 1000
@@ -22,20 +23,22 @@ function updateTime(){
     month = currentTime.getMonth() + 1
     day = currentTime.getDate()
     hour = currentTime.getHours()
+    if (hour.toString().length < 2){
+        hour = "0" + hour
+    }
     minute = currentTime.getMinutes()
+    if (minute.toString().length < 2){
+        minute = "0" + minute
+    }
     second = currentTime.getSeconds()
+    if (second.toString().length < 2){
+        second = "0" + second
+    }
     dayOfWeek = currentTime.getDay()
-    dayOfMonth = 0 //Can be deleted?
+    console.log(hour + ":" + minute + ":" + second)
 }
 
-//For testing purposes
-console.log("Date: " + day + "/" + month + "/" + year)
-
-//Day of week
-
-console.log("Day of week: " + daysArray[dayOfWeek])
-
-//Day of Month
+//Function to display day of month
 
 function displayWeekday(){
     if(day === 1 || day === 21 || day == 31){
@@ -52,10 +55,14 @@ function displayWeekday(){
 
 displayWeekday()
 
+//Output of time
+
 function displayTime(){
+    displayWeekday()
     console.log(currentTime)
     console.log("Date: " + day + "/" + month + "/" + year)
-    console.log(hour + ":" + minute + ":" + second)
+    console.log("Time: " + hour + ":" + minute + ":" + second)
+    console.log("Day of week: " + daysArray[dayOfWeek])
 }
 
 setInterval(updateTime, refresh)

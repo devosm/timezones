@@ -14,6 +14,8 @@
 //Main variables
 var currentTime = new Date()
 let weekOfDayEl = document.getElementById("weekOfDay-el")
+let dateEl = document.getElementById("date-el")
+let timeEl = document.getElementById("time-el")
 let daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 let monthsArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 

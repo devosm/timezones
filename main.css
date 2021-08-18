@@ -1,0 +1,11 @@
+body{
+    background-image: linear-gradient(to bottom right, 0XAEC089, 0X24CAA6)
+}
+
+p{
+    font-size: 70px;
+    font-family: Roboto;
+    font-weight: bold;
+    text-align-last: center;
+    line-height: 200px;
+}

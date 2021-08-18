@@ -1,11 +1,19 @@
 body{
-    background-image: linear-gradient(to bottom right, 0XAEC089, 0X24CAA6)
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, #004e92, #000428)
 }
 
 p{
-    font-size: 70px;
+    font-size: 120px;
     font-family: Roboto;
     font-weight: bold;
     text-align-last: center;
-    line-height: 200px;
+    line-height: 250px;
+    color: white;
+    border: white;
+    border-style:solid;
+    width: 50%;
 }

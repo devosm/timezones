@@ -36,7 +36,8 @@ function updateDay(){
     year = currentTime.getFullYear()
     month = currentTime.getMonth() + 1
     day = currentTime.getDate()
-    dayOfWeek = currentTime.getDay()    
+    dayOfWeek = currentTime.getDay()
+    displayDateAndTime()
 }
 //Function to display day of month
 
@@ -57,15 +58,18 @@ displayDayOfMonth()
 
 //Output of time
 
-function displayTime(){
+function displayDateAndTime(){
     displayDayOfMonth()
     console.log("Date: " + day + "/" + month + "/" + year)
-    console.log("Time: " + hour + ":" + minute + ":" + second)
     console.log("Day of week: " + daysArray[dayOfWeek])
 }
 
+function displayUpdatedTime(){
+    console.log("Time: " + hour + ":" + minute + ":" + second)
+}
+
 setInterval(updateTime, 1000)
-setInterval(displayTime, 1000)
+setInterval(displayUpdatedTime, 1000)
 
 if(hour === 0 && minute === 0){
     updateDay()

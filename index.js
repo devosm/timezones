@@ -2,6 +2,7 @@
 // - Only update time in updateTime()
 // - Separate function(s) for updating day/date/month when time hits midnight
 // - Merge variables in updateTime instead of loose?
+// - Add SplitUpdate.JS to index.js
 
 // Github:
 // - Learn about branches
@@ -13,7 +14,7 @@
 
 //Main variables
 var currentTime = new Date()
-let weekOfDayEl = document.getElementById("weekOfDay-el")
+let dayOfWeekEl = document.getElementById("dayOfWeek-el")
 let dateEl = document.getElementById("date-el")
 let timeEl = document.getElementById("time-el")
 let daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -50,6 +51,9 @@ function updateTime(){
     }
     dayOfWeek = currentTime.getDay()
     console.log(hour + ":" + minute + ":" + second)
+    dayOfWeekEl.innerHTML =  "Today is " + daysArray[dayOfWeek]
+    dateEl.innerHTML = dayOfMonth + " of " + monthsArray[month - 1]
+    timeEl.innerHTML = "The time is " + hour + " " + minute + " " + second
 }
 
 //Function to display day of month

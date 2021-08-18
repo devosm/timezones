@@ -1,9 +1,15 @@
-/* 
-TODO:
-- Only update time in updateTime()
-- Separate function(s) for updating day/date/month when time hits midnight
-- Merge variables in updateTime instead of loose
- */
+// TODO:
+// - Only update time in updateTime()
+// - Separate function(s) for updating day/date/month when time hits midnight
+// - Merge variables in updateTime instead of loose
+
+// Github:
+// - Learn about branches
+// - Merge (testing now)
+// - Pull requests
+
+// Javascript:
+// - Learn about hoisting
 
 //Main variables
 var currentTime = new Date()

@@ -1,7 +1,7 @@
 // TODO:
 // - Only update time in updateTime()
 // - Separate function(s) for updating day/date/month when time hits midnight
-// - Merge variables in updateTime instead of loose
+// - Merge variables in updateTime instead of loose?
 
 // Github:
 // - Learn about branches

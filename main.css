@@ -1,19 +1,45 @@
 body{
-    height: 100%;
-    width: 100%;
     background-attachment: fixed;
-    margin: 0;
     background-image: linear-gradient(to bottom right, #004e92, #000428)
 }
 
-p{
-    font-size: 120px;
-    font-family: Roboto;
-    font-weight: bold;
-    text-align-last: center;
-    line-height: 250px;
+.fulltime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-family: roboto;
     color: white;
-    border: white;
-    border-style:solid;
-    width: 50%;
+}
+
+.dayoftheweek {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    margin: 20px;
+    padding: 50px;
+    width: 25%;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    margin: 20px;
+    padding: 50px;
+    width: 25%;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    margin: 20px;
+    padding: 50px;
+    width: 25%;
+    flex-shrink: 1;
 }
